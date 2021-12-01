@@ -1,0 +1,67 @@
+// $primary: #FFAA34;
+$green-alex: #61bd5f;
+
+// // file: bootstrap-italia-custom.scss
+
+// // modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
+
+// // Per l'override del colore $primary della palette in formato HSB:
+
+// // Per ottenere il colore #FF3333 (https://rgb.to/ff3333)
+// $primary-h: 0;
+// $primary-s: 80;
+// $primary-b: 100;
+// // Nota: per convertire il codice esadecimale di un colore formato HSB
+// // è possibile utilizzare ad esempio il sito https://rgb.to/.
+
+// // Per l'override della famiglia di caratteri
+// $font-family-serif:      "Custom Font", Georgia, serif;
+// $font-family-sans-serif: "Custom Font", Arial, Helvetica, sans-serif;
+// $font-family-monospace:  "Custom Font", "Courier New", Courier, monospace;
+
+
+// Materia 4.6.0
+// Bootswatch
+
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #bbb !default;
+$gray-600: #666 !default;
+$gray-700: #444 !default;
+$gray-800: #222 !default;
+$gray-900: #212121 !default;
+$black:    #000 !default;
+
+$blue:    #2196f3 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #e51c23 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ff9800 !default;
+$green:   #4caf50 !default;
+$teal:    #20c997 !default;
+$cyan:    #9c27b0 !default;
+
+$primary:       $blue !default;
+$secondary:     $white !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $white !default;
+$dark:          $gray-800 !default;
+
+
+
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:    Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$font-size-base:            .8125rem !default;
+$font-weight-base:          400 !default;

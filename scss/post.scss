@@ -1,0 +1,16 @@
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" !default;
+@import url($web-font-path);
+// Mixins ======================================================================
+
+
+#page-content {background-color: $green-alex;}
+#nav-drawer {background-color: $gray-600;}
+//@import 'local-rules';
+
+
+
+
+
