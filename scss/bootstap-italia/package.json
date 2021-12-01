@@ -1,0 +1,19 @@
+{
+  "name": "sample-bootstrap-it",
+  "version": "1.0.0",
+  "description": "alex playground on bootstrap italia",
+  "main": "",
+  "scripts": {
+    "build-css": "dart-sass ./scss:./css --load-path=./ --style=compressed --source-map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "bootstrap-italia": "^1.4.3"
+  }
+}
