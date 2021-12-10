@@ -1,8 +1,7 @@
 // funzioni e variabili colore
-
 @import 'functions';
 @import 'utilities/colors_vars';
-
+@import 'utilities/colors';
 
 
 // Materia 4.0.0
@@ -45,83 +44,78 @@ $light:         $white !default;
 $dark:          $gray-800 !default;
 
 @import 'variables';
-
 // Body
 
-$body-color:    $gray-700 !default;
+// $body-color:    $gray-700 !default;
 
-// Fonts
+// // Fonts
 
 // $font-family-sans-serif: "Titillium Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-size-base: 0.8125rem !default;
-//$font-weight-base: 400 !default;
 
-// Text -alex (copiato da bootstrap-italia
-$font-family-serif: Lora, Georgia, serif !default;
-$font-family-sans-serif: 'Titillium Web', Geneva, Tahoma, sans-serif !default;
-$font-family-base: $font-family-sans-serif;
-$text-color: $gray-700;
-// $text-muted: $gray-tertiary;
-$letter-spacing-base: 0;
-$line-height-base: 1.5;
-$font-weight-base: 300;
-
+// $line-height: 1.555;
 // Buttons
+$btn-text-transform: none !important;
+$btn-letter-spacing: normal;
+$btn-font-weight: 400 ;
+$btn-font-size: 14px ;
 
-$input-btn-padding-y:       1rem !default;
-$input-btn-padding-x:       1rem !default;
+// // Forms
 
-// Forms
+$input-btn-padding-y:       1rem;
+$input-btn-padding-x:       1rem;
 
-$input-bg:                       transparent !default;
-$input-disabled-bg:              transparent !default;
+// $input-bg:                       transparent !default;
+// $input-disabled-bg:              transparent !default;
 
-$input-color:                    $gray-600 !default;
-$input-border-color:         transparent !default;
+// $input-color:                    $gray-600 !default;
+// $input-border-color:         transparent !default;
 
-$input-border-radius:            0 !default;
-$input-border-radius-lg:         0 !default;
-$input-border-radius-sm:         0 !default;
+// $input-border-radius:            0 !default;
+// $input-border-radius-lg:         0 !default;
+// $input-border-radius-sm:         0 !default;
 
-$input-placeholder-color:        rgba(0,0,0,0.4) !default;
+// $input-placeholder-color:        rgba(0,0,0,0.4) !default;
 
-$input-group-addon-bg:           transparent !default;
+// $input-group-addon-bg:           transparent !default;
 
-// Navs
+// // Navs
 
-$nav-link-disabled-color:       $gray-500 !default;
+// $nav-link-disabled-color:       $gray-500 !default;
 
-$nav-tabs-border-color:                       transparent !default;
+// $nav-tabs-border-color:                       transparent !default;
 
-// Navbar
+// // Navbar
 
-$navbar-padding-y:                  1rem !default;
+// $navbar-padding-y:                  1rem !default;
 
-$navbar-dark-color:                 rgba($white,.75) !default;
-$navbar-dark-hover-color:           $white !default;
+// $navbar-dark-color:                 rgba($white,.75) !default;
+// $navbar-dark-hover-color:           $white !default;
 
-// Cards
+// // Cards
 
-$card-border-width:                 0;
-$card-border-color:                 transparent;
+// $card-border-width:                 0;
+// $card-border-color:                 transparent;
 
-// Tooltips
+// // Tooltips
 
-$tooltip-bg:                        $gray-700 !default;
+// $tooltip-bg:                        $gray-700 !default;
 
-// Modals
+// // Modals
 
-$modal-content-border-color:        transparent !default;
+// $modal-content-border-color:        transparent !default;
 
-// Progress bars
+// // Progress bars
 
-$progress-height:               6px !default;
-$progress-border-radius:        0 !default;
+// $progress-height:               6px !default;
+// $progress-border-radius:        0 !default;
 
-// Close
+// // Close
 
-$close-font-size:             2.125rem !default;
-$close-font-weight:           300 !default;
+// $close-font-size:             2.125rem !default;
+// $close-font-weight:           300 !default;
+
+
+
 
 // Import FontAwesome.
 @import "fontawesome";
@@ -471,7 +465,6 @@ $close-font-weight:           300 !default;
 @include btn(light,$light,$white);
 
 .btn {
-  text-transform: uppercase;
   border: none;
   box-shadow: 0 1px 4px rgba(0,0,0,.4);
   transition: all 0.4s;
