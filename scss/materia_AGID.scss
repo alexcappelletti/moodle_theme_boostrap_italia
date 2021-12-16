@@ -4,10 +4,6 @@
 @import 'utilities/colors_vars';
 @import 'utilities/colors';
 
-// Materia 4.0.0
-// Bootswatch
-
-//
 // Color system
 //
 
@@ -112,20 +108,16 @@ $btn-text-transform: none !important;
 
 // Import FontAwesome.
 @import "fontawesome";
-
 // Import All of Bootstrap
 @import "bootstrap";
-
 // Import Core moodle CSS
 @import "moodle";
-// Materia 4.0.0
-// Bootswatch
 
-
+@import "klass.scss";
 // Variables ===================================================================
   
 // Effects =====================================================================
-
+/*
 @mixin ripple($color){
   position: relative;
 
@@ -802,3 +794,4 @@ input[type="checkbox"],
     }
   }
 }
+*/

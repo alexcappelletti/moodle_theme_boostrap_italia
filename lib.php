@@ -38,7 +38,8 @@ function theme_boost_materialized_page_init(moodle_page $page) {
 
 function theme_boost_materialized_get_agid($theme) {
     global $CFG;   
-    return file_get_contents($CFG->dirroot . '/theme/boost_materialized/scss/materia_AGID.scss');
+    //return file_get_contents($CFG->dirroot . '/theme/boost_materialized/scss/materia_AGID.scss');
+    return file_get_contents($CFG->dirroot . '/theme/boost_materialized/scss/klass.scss');
 }
 
 
@@ -53,7 +54,7 @@ function theme_boost_materialized_get_agid($theme) {
 function theme_boost_materialized_process_css($css, $theme) {
     // Set the background image for the logo.
     $logo = $theme->setting_file_url('logo', 'logo');
-    // $css = theme_boost_materialized_set_logo($css, $logo);
+    $css = theme_boost_materialized_set_logo($css, $logo);
     // Set custom CSS.
    
     // $css = theme_boost_materialized_set_customcss($css, $customcss);
