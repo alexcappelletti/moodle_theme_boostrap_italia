@@ -1,95 +1,46 @@
-// funzioni e variabili colore
-@import 'functions';
-@import 'typography';
-@import 'utilities/colors_vars';
-@import 'utilities/colors';
 
 //
 // Color system AGID
 //
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #eee !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #bbb !default;
-$gray-600: #666 !default;
-$gray-700: #444 !default;
-$gray-800: #222 !default;
-$gray-900: #212121 !default;
-$black:    #000 !default;
 
-$blue:    #2196F3 !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #e51c23 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ff9800 !default;
-$green:   #4CAF50 !default;
-$teal:    #20c997 !default;
-$cyan:    #9C27B0 !default;
 
-$primary:       $blue !default;
-$secondary:     $white !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $white !default;
-$dark:          $gray-800 !default;
 
-$color_log_cabin_approx: #232323;
-$white: #fff;
-$black: #000;
-$color_allports_approx: #0073a5;
-$color_cerulean_approx: #009fe5;
-$concrete: #f2f2f2;
-$color_thunderbird_approx: #c02424;
+
+
+
+
+
+@import 'functions';
+@import 'utilities/colors_vars';
+@import 'utilities/colors';
+@import "variables";
+@import "typography";
+
+//typography AGID
+$font-family-sans-serif: 'Titillium Web', Geneva, Tahoma, sans-serif !default;
+$font-family-base: $font-family-sans-serif;
+// $letter-spacing-base: 0;
+// $line-height-base: 1.5;
+// $font-weight-base: 300;
+
+//$color_allports_approx: #0073a5;
+$color_allports_approx:$primary-a1;
 $color_tuna_approx: #373a3c;
-$color_storm_dust_approx: #656565;
-$seashell: #f1f1f1;
-$color_mercury_approx: #e6e6e6;
-$color_quill_gray_approx: #d5d5d5;
-$color_mandy_approx: #dc4a58;
-$color_fuscous_gray_approx: #4e4e4e;
-$color_masala_approx: #3a3a3a;
-$color_danube_approx: #5a7ec9;
-$color_monza_approx: #bc0014;
-$color_scooter_approx: #28aae1;
+//$color_danube_approx: #5a7ec9;
+$color_danube_approx: $primary-a3;
+//$color_scooter_approx: #28aae1;
+$color_scooter_approx: $primary-a4;
 $color_pomegranate_approx: #f63e28;
-$alabaster: #fafafa;
-$color_gray_approx: #828282;
-$color_iron_approx: #d6d6d6;
-$color_mine_shaft_approx: #313131;
-$color_celeste_approx: #cbcbcb;
-$color_alto_approx: #d9d9d9;
 $color_deep_cerulean_26_approx: rgba(0, 126, 182, .26);
 $color_viking_approx: #62bee6;
 $color_boston_blue_approx: #3a87ad;
 $color_link_water_approx: #d9edf7;
 $color_charlotte_approx: #bce8f1;
-$color_black_haze_approx: #f7f7f7;
-$color_concrete_approx: #f3f3f3;
 $color_cedar_approx: #3e1a1a;
 $color_picton_blue_approx: #39b3e6;
-$black_20: rgba(0, 0, 0, 0.2);
-$black_53_3: rgba(0, 0, 0, 0.53);
-$black_75: rgba(0, 0, 0, .75);
-$black_50: rgba(0, 0, 0, 0.5);
 
-//typography AGID
-$font-family-serif: Lora, Georgia, serif !default;
-$font-family-sans-serif: 'Titillium Web', Geneva, Tahoma, sans-serif !default;
-$font-family-monospace: 'Roboto Mono', monospace !default;
-$font-family-base: $font-family-sans-serif;
-$text-color: $gray-700;
-$text-muted: $gray-tertiary;
-$letter-spacing-base: 0;
-$line-height-base: 1.5;
-$font-weight-base: 300;
-
+//@import "bootstrap-italia/bootstrap-italia";
 // Import FontAwesome.
 @import "fontawesome";
 // Import All of Bootstrap
@@ -108,7 +59,7 @@ h5,
 h6 {
     font-weight: normal;
     font-family:$font-family-sans-serif;
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 *:focus {
     outline: none;
@@ -173,13 +124,13 @@ a:not([class]):focus,
     color: $white;
 }
 a {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 a:hover {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 a:focus {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     outline: 0;
 }
 a:first-of-type > .icon {
@@ -211,7 +162,7 @@ h6 {
 }
 .custom-select:focus {
     box-shadow: none;
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     outline: none;
 }
 :target {
@@ -220,10 +171,10 @@ h6 {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 #header {
-    background: $color_allports_approx;
+    background: $primary-a7;
     max-height: none;
     border-bottom: 0;
 }
@@ -253,7 +204,7 @@ h6 {
     color: $white;
 }
 #header .popover-region .popover-region-container i.icon:before {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 #header .usermenu {
     float: right;
@@ -341,26 +292,26 @@ h6 {
     display: none;
 }
 #header .menubar .dropdown-menu a {
-    color: $black_53_3;
+    color: $gray-300;
     background: $white;
-    border-bottom: 1px solid $color_mercury_approx;
+    border-bottom: 1px solid $gray-100;
 }
 #header .menubar .dropdown-menu a:last-child {
     border-bottom: 0;
 }
 #header .menubar .dropdown-menu a:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 #header .menubar .dropdown-menu a:focus {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 #header .menubar .dropdown-menu a:focus i.icon {
     color: $white;
 }
 #header .moodle-actionmenu.show[data-enhanced] .menu a:hover {
-    color: $color_log_cabin_approx;
+    color: $gray-900;
 }
 .header-main-menubar {
     background: $white;
@@ -371,11 +322,11 @@ h6 {
 }
 .header-main-menubar .dropdown-menu a:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .header-main-menubar .dropdown-menu a:focus {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dir-rtl .header-main .header-main-content .top-search {
     padding: 0 0 0 38px;
@@ -590,7 +541,7 @@ h6 {
     font-size: 16px;
 }
 .dir-rtl .breadcrumb > li a {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .dir-rtl .breadcrumb > li > .divider:before {
     content: "\f100";
@@ -691,8 +642,8 @@ h6 {
     line-height: 36px;
 }
 .usermenu .moodle-actionmenu .toggle-display:hover {
-    color: $color_log_cabin_approx;
-    background: $seashell;
+    color: $gray-900;
+    background: $gray-100;
 }
 .usermenu .moodle-actionmenu .toggle-display .userbutton {
     height: auto;
@@ -721,11 +672,11 @@ h6 {
     top: auto;
     left: auto;
     right: 0;
-    border: 1px solid $seashell;
+    border: 1px solid $gray-100;
 }
 .header-main .navbar .navbar-inner .nav-item .dropdown-menu a {
-    color: $color_cerulean_approx;
-    border-bottom: 1px solid $color_mercury_approx;
+    color: $primary;
+    border-bottom: 1px solid $gray-100;
     background: $white;
     white-space: normal;
     padding-top: 0.5rem;
@@ -736,18 +687,18 @@ h6 {
 }
 .header-main .navbar .navbar-inner .nav-item .dropdown-menu a:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .header-main .navbar .navbar-inner .navbar-toggleable-md a.nav-link {
     color: $white;
     padding: 43px 15px;
 }
 .header-main .navbar .navbar-inner .navbar-toggleable-md a.nav-link:hover {
-    color: $color_cerulean_approx;
+    color: $primary;
     background: $white;
 }
 .header-main .navbar .navbar-inner .navbar-toggleable-md a.nav-link:focus {
-    color: $color_cerulean_approx;
+    color: $primary;
     background: $white;
 }
 .header-main .navbar .navbar-inner button.navbar-toggler {
@@ -766,21 +717,21 @@ h6 {
     background: none;
 }
 .header-main .navbar .navbar-inner a.nav-link {
-    color: $color_log_cabin_approx;
+    color: $gray-900;
     text-align: left;
     padding: 10px 15px;
     text-transform: uppercase;
 }
 .header-main .navbar .navbar-inner a.nav-link:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .header-main .navbar .navbar-inner a.nav-link:focus {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .header-main .header-main-content {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .header-main .header-main-content .navbar-toggleable-md {
     padding-bottom: 10px;
@@ -790,7 +741,7 @@ h6 {
     color: $white;
 }
 .header-main .header-main-content .navbar-toggleable-md .infoarea a.nav-link:hover {
-    color: $color_cerulean_approx;
+    color: $primary;
     background: $white;
 }
 .header-main .header-main-content .top-search {
@@ -839,16 +790,16 @@ h6 {
 .header-main .header-main-menubar .navbar-toggler:before {
     content: '\f0c9';
     font-family: fontawesome;
-    color: $color_storm_dust_approx;
+    color: $gray-600;
 }
 .header-main .header-main-menubar .navbar-toggler:hover {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .header-main .header-main-menubar .navbar-toggler:hover:before {
     color: $white;
 }
 .header-main .header-main-menubar .navbar-toggler:focus {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .header-main .header-main-menubar .navbar-toggler:focus:before {
     color: $white;
@@ -859,7 +810,7 @@ h6 {
 }
 .header-main .header-main-menubar .navbar-text a {
     font-family:$font-family-sans-serif;
-    color: $color_log_cabin_approx;
+    color: $gray-900;
     text-transform: uppercase;
 }
 .header-main .header-main-menubar .navbar-text a:hover {
@@ -916,7 +867,7 @@ h6 {
     font-size: 16px;
 }
 .dir-ltr .breadcrumb > li a {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .dir-ltr .breadcrumb > li > .divider:before a {
     content: "\f101";
@@ -932,7 +883,7 @@ h6 {
 }
 .navbar .nav > li > a {
     font-family:$font-family-sans-serif;
-    color: $color_log_cabin_approx;
+    color: $gray-900;
     line-height: 21px;
     padding-right: 18px;
     padding-left: 18px;
@@ -941,7 +892,7 @@ h6 {
 }
 .navbar .nav > li > a:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .nav > li > .dropdown-menu::before {
     border: 0;
@@ -951,11 +902,11 @@ h6 {
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .nav li.dropdown > .dropdown-toggle {
     padding-right: 25px;
@@ -970,7 +921,7 @@ h6 {
 }
 .navbar .nav li.dropdown.active > .dropdown-toggle {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .btn-navbar {
     background: none;
@@ -984,35 +935,35 @@ h6 {
 .navbar .btn-navbar .icon-bar {
     width: 22px;
     height: 3px;
-    background: $color_storm_dust_approx;
+    background: $gray-600;
     box-shadow: none;
 }
 .navbar .btn-navbar .icon-bar + .icon-bar {
     margin-top: 4px;
 }
 .navbar .btn-navbar:hover {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .btn-navbar:hover .icon-bar {
     background: $white;
     border-radius: 0;
 }
 .navbar .btn-navbar:focus {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .btn-navbar:focus .icon-bar {
     background: $white;
     border-radius: 0;
 }
 .navbar .btn-navbar:active {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .btn-navbar:active .icon-bar {
     background: $white;
     border-radius: 0;
 }
 .navbar .btn-navbar.active {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .navbar .btn-navbar.active .icon-bar {
     background: $white;
@@ -1031,7 +982,7 @@ h6 {
 .dropdown-menu .dropdown-item.active {
     color: $white;
     text-decoration: none;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dropdown-menu .dropdown-item:hover a,
 .dropdown-menu .dropdown-item:focus a,
@@ -1040,7 +991,7 @@ h6 {
 .dropdown-menu .dropdown-item.active a {
     color: $white;
     text-decoration: none;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dropdown-menu .dropdown-item:hover i,
 .dropdown-menu .dropdown-item:focus i,
@@ -1049,7 +1000,7 @@ h6 {
     color: $white;
 }
 .dropdown-menu {
-    background: $seashell;
+    background: $gray-100;
     padding: 0;
     border: 0;
     border-radius: 0;
@@ -1058,24 +1009,24 @@ h6 {
 }
 .dropdown-menu > li > a {
     font-family:$font-family-sans-serif;
-    color: $color_log_cabin_approx;
+    color: $gray-900;
     padding: 10px 30px 10px 20px;
 }
 .dropdown-menu > li > a:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dropdown-menu > li > a:focus {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dropdown-menu > li > a:active {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dropdown-menu > li > a.active {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dropdown-submenu > a::after {
     font-family: FontAwesome;
@@ -1083,17 +1034,17 @@ h6 {
     border: 0;
 }
 .dropdown-submenu > .dropdown-menu {
-    background: $color_mercury_approx;
+    background: $gray-100;
     border-radius: 0;
     margin: 0;
 }
 .dropdown-submenu:hover > a {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .dropdown-submenu:focus > a {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 
 @media (min-width: 1200px) {
@@ -1175,47 +1126,47 @@ h6 {
     }
     .nav-collapse .dropdown-menu a {
         font-weight: normal;
-        color: $color_log_cabin_approx;
+        color: $gray-900;
     }
     .nav-collapse .dropdown-menu a:hover {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .dropdown-menu a:focus {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .dropdown-menu > li > a:hover {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .dropdown-menu > li > a:focus {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .nav > li > a {
         font-weight: normal;
-        color: $color_log_cabin_approx;
+        color: $gray-900;
     }
     .nav-collapse .nav > li > a:hover {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .nav > li > a:focus {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .dropdown-submenu a:focus {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .dropdown-submenu a:hover {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .nav-collapse .dropdown-submenu a:active {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .header-main .navbar .navbar-inner .nav-item .dropdown-menu a {
         border: 0;
@@ -1249,11 +1200,11 @@ h6 {
     }
     .navbar .nav-collapse.active .nav .dropdown-submenu.open > a {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .navbar .nav-collapse.active .nav .dropdown-submenu:hover.open > a {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .navbar .nav-collapse.active .nav .dropdown-submenu .dropdown-toggle:after {
         font-family: FontAwesome;
@@ -1264,11 +1215,11 @@ h6 {
     }
     .navbar .nav-collapse.active .nav .dropdown-menu .dropdown-submenu.open > a {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .navbar .nav-collapse.active .nav .dropdown-menu .dropdown-submenu:hover.open > a {
         color: $white;
-        background: $color_cerulean_approx;
+        background: $primary;
     }
     .navbar .nav-collapse.active .nav .dropdown-menu .dropdown-submenu .dropdown-toggle:after {
         font-family: FontAwesome;
@@ -1669,16 +1620,16 @@ h6 {
     border-top-color: $white;
 }
 .jsenabled #header .moodle-actionmenu[data-enhance] .toggle-display.textmenu:hover .caret {
-    border-top-color: $color_log_cabin_approx;
+    border-top-color: $gray-900;
 }
 .jsenabled #header .moodle-actionmenu.show[data-enhance] .toggle-display.textmenu .caret {
-    border-top-color: $color_log_cabin_approx;
+    border-top-color: $gray-900;
 }
 .jsenabled .usermenu .moodle-actionmenu.show {
-    background: $seashell;
+    background: $gray-100;
 }
 .jsenabled .usermenu .moodle-actionmenu.show .toggle-display {
-    color: $color_log_cabin_approx;
+    color: $gray-900;
 }
 .jsenabled .usermenu .moodle-actionmenu.show .menu::before {
     border: 0;
@@ -1687,9 +1638,9 @@ h6 {
     border: 0;
 }
 .jsenabled .usermenu .moodle-actionmenu.show .menu {
-    background: $seashell;
+    background: $gray-100;
     border-top: 0;
-    border-color: $color_quill_gray_approx;
+    border-color: $gray-200;
     border-radius: 0;
     box-shadow: none;
 }
@@ -1719,17 +1670,17 @@ h6 {
     float: none;
     width: 13px;
     height: 13px;
-    background: $color_quill_gray_approx;
+    background: $gray-200;
     display: inline-block;
     border-radius: 7px;
     cursor: pointer;
-    box-shadow: inset 0 2px 2px 0 $black_75;
+    box-shadow: inset 0 2px 2px 0 $gray-400;
 }
 .carousel-indicators li + li {
     margin-left: 7px;
 }
 .carousel-indicators .active {
-    background: $color_mandy_approx;
+    background: $primary;
     box-shadow: none;
 }
 .carousel-control {
@@ -1767,10 +1718,18 @@ h6 {
     content: '\f104';
 }
 #footer {
-    background: $white;
-    border-top: 5px solid $color_cerulean_approx;
+    background: $primary-a10;
+    border-top: 5px solid $primary;
     margin: 30px 0 0;
     padding: 0 !important;
+    color: $white;
+    font-size: 16px;
+    h4 a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
 }
 #footer .infoarea {
     margin-bottom: 20px;
@@ -1793,7 +1752,7 @@ h6 {
     margin-top: 20px;
 }
 #footer .infoarea > p {
-    color: $color_fuscous_gray_approx;
+    //color: $gray-700;
     line-height: 22px;
     margin-top: 45px;
     margin-bottom: 0;
@@ -1806,12 +1765,12 @@ h6 {
 }
 #footer .foot-links ul li a {
     font-size: 16px;
-    color: $color_masala_approx;
+    //color: $gray-700;
     line-height: 20px;
     display: inline-block;
 }
 #footer .foot-links ul li a:hover {
-    color: $color_thunderbird_approx;
+    color: $gray-100;
     text-decoration: none;
 }
 #footer ul {
@@ -1823,12 +1782,12 @@ h6 {
     margin-bottom: 20px;
 }
 #footer .contact-info p {
-    color: $color_masala_approx;
+    color: $gray-100;
     line-height: 24px;
     margin-bottom: 0;
 }
 #footer .contact-info p a {
-    color: $color_masala_approx;
+    color: $gray-100;
 }
 #footer .social-media {
     margin-bottom: 20px;
@@ -1840,7 +1799,7 @@ h6 {
     color: $color_danube_approx;
 }
 #footer .social-media ul .smedia-02 a {
-    color: $color_monza_approx;
+    color: $primary-a5;
 }
 #footer .social-media ul .smedia-03 a {
     color: $color_scooter_approx;
@@ -1852,20 +1811,21 @@ h6 {
     text-align: center;
 }
 #footer .footer-foot p {
-    color: $color_masala_approx;
+    //color: $gray-700;
     line-height: 20px;
     padding: 6px 0;
-    border-top: 1px solid $color_cerulean_approx;
+    border-top: 1px solid $primary;
     margin-bottom: 0;
 }
 #footer .footer-foot p span {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 #footer .footer-foot p a {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 #footer .footer-main h5 {
-    color: $color_fuscous_gray_approx;
+    color: $white;
+    //color: $gray-700;
     text-transform: uppercase;
     margin: 10px 0;
 }
@@ -1883,16 +1843,16 @@ h6 {
     padding: 0;
 }
 .forumpost {
-    background: $alabaster;
+    background: $white;
     padding: 20px !important;
-    border-color: $color_quill_gray_approx;
+    border-color: $gray-200;
     border-radius: 0;
     box-shadow: none;
 }
 .forumpost .subject {
     font-weight: normal;
     font-size: 22px;
-    color: $color_cerulean_approx;
+    color: $primary;
     line-height: 1.1818181818;
     margin-bottom: 3px;
 }
@@ -1904,17 +1864,17 @@ h6 {
     margin: 5px 0;
 }
 .forumpost .row .topic .author {
-    color: $color_gray_approx;
+    color: $gray-500;
 }
 .forumpost .row .topic .author a {
-    color: $color_gray_approx;
+    color: $gray-500;
 }
 .forumpost .row .topic .author a:hover {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 
 #page-site-index {
-    background: $concrete;
+    background: $gray-100;
 }
 
 #page-site-index .forumpost {
@@ -1933,7 +1893,7 @@ h6 {
    font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     display: inline-block;
     text-transform: uppercase;
@@ -1961,7 +1921,7 @@ h6 {
    font-family:$font-family-sans-serif;
     color: $white;
     line-height: 30px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 9px;
     display: inline-block;
     text-transform: uppercase;
@@ -1984,7 +1944,7 @@ h6 {
 }
 .menubar .dropdown .dropdown-menu a:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .menubar .dropdown .dropdown-menu a:hover i,
 .menubar .dropdown .dropdown-menu a:focus i,
@@ -1994,7 +1954,7 @@ h6 {
 .block {
     background: $white;
     padding-top: 0;
-    border-color: $color_quill_gray_approx;
+    border-color: $gray-200;
     border-radius: 0;
     box-shadow: none;
 }
@@ -2007,7 +1967,7 @@ h6 {
 }
 .block .header h2 {
     font-weight: normal;
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     text-shadow: none;
     text-transform: none;
 }
@@ -2016,7 +1976,7 @@ h6 {
 }
 .block .content h3 {
     font-weight: normal;
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     padding-left: 0;
     text-transform: none;
 }
@@ -2024,10 +1984,10 @@ h6 {
     font-size: 20px;
 }
 .block .content a {
-    color: $color_storm_dust_approx;
+    color: $gray-600;
 }
 .block .content a:hover {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .block .content a.btn.active {
     background: $color_allports_approx;
@@ -2041,7 +2001,7 @@ h6 {
 .block .calendar-controls .previous {
     font-size: 16px;
     font-family: FontAwesome;
-    color: $color_storm_dust_approx;
+    color: $gray-600;
     text-align: right;
 }
 .block .calendar-controls .previous:before {
@@ -2055,7 +2015,7 @@ h6 {
 .block .calendar-controls .next {
     font-size: 16px;
     font-family: FontAwesome;
-    color: $color_storm_dust_approx;
+    color: $gray-600;
     text-align: left;
 }
 .block .calendar-controls .next:after {
@@ -2068,7 +2028,7 @@ h6 {
 }
 .block .calendar-controls .current a {
     font-size: 16px;
-    color: $color_storm_dust_approx;
+    color: $gray-600;
 }
 .block .minicalendar th {
     font-weight: normal;
@@ -2086,19 +2046,19 @@ h6 {
 .block .minicalendar .today > a {
     min-width: 14px;
     color: $white;
-    background: $color_mandy_approx;
+    background: $primary;
     padding: 0 3px;
 }
 .block.block_news_items .content a {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 .block .block-cards .btn.btn-link.btn-icon {
-    background: $color_mercury_approx;
+    background: $gray-100;
 }
 .block .block-cards .btn.btn-link.btn-icon:hover,
 .block .block-cards .btn.btn-link.btn-icon:focus {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 #page-login-index #header button.btn {
     display: none;
@@ -2190,23 +2150,23 @@ h6 {
     display: inline-block;
 }
 .breadcrumb > li > a {
-    color: $color_log_cabin_approx;
+    color: $gray-900;
 }
 .breadcrumb > li > a:hover {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .breadcrumb > li > a:focus {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .breadcrumb > li > span {
-    color: $color_log_cabin_approx;
+    color: $gray-900;
 }
 .breadcrumb > li > .divider {
     display: inline-block;
 }
 .breadcrumb > li > .divider:before {
     font-family: FontAwesome;
-    color: $color_log_cabin_approx;
+    color: $gray-900;
 }
 .breadcrumb > li > .divider > .arrow {
     display: inline-block;
@@ -2226,10 +2186,10 @@ h6 {
     padding: 16px 0 12px;
 }
 .collapsible-actions a {
-    color: $color_storm_dust_approx;
+    color: $gray-600;
 }
 .collapsible-actions a:hover {
-    color: $color_storm_dust_approx;
+    color: $gray-600;
 }
 .collapsible-actions a:focus {
     text-decoration: none;
@@ -2238,9 +2198,9 @@ legend {
     float: left;
     font-size: 18px;
     font-family:$font-family-sans-serif;
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     padding-bottom: 10px;
-    border-bottom-color: $color_iron_approx;
+    border-bottom-color: $gray-200;
     margin-bottom: 20px;
 }
 legend + div {
@@ -2250,17 +2210,17 @@ legend + div {
     margin-bottom: 15px;
 }
 .mform legend a {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .mform legend a:hover {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .mform .fpassword .unmask > input {
     margin: -4px 0 0;
 }
 label {
     font-size: 16px;
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
     vertical-align: middle;
 }
 
@@ -2305,8 +2265,8 @@ label {
     }
 }
 select {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2315,7 +2275,7 @@ select {
     line-height: 40px;
 }
 select:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
@@ -2326,8 +2286,8 @@ select[multiple] {
     height: auto;
 }
 textarea {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2335,13 +2295,13 @@ textarea {
     height: auto;
 }
 textarea:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="text"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2350,7 +2310,7 @@ input[type="text"] {
     line-height: 1;
 }
 input[type="text"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
@@ -2358,8 +2318,8 @@ input[type="text"] + input[type="submit"] {
     margin: 0 5px 10px 0;
 }
 input[type="password"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2368,13 +2328,13 @@ input[type="password"] {
     line-height: 1;
 }
 input[type="password"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="datetime"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2383,13 +2343,13 @@ input[type="datetime"] {
     line-height: 1;
 }
 input[type="datetime"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="datetime-local"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2398,13 +2358,13 @@ input[type="datetime-local"] {
     line-height: 1;
 }
 input[type="datetime-local"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="date"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2413,13 +2373,13 @@ input[type="date"] {
     line-height: 1;
 }
 input[type="date"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="month"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2428,13 +2388,13 @@ input[type="month"] {
     line-height: 1;
 }
 input[type="month"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="time"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2443,13 +2403,13 @@ input[type="time"] {
     line-height: 1;
 }
 input[type="time"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="week"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2458,13 +2418,13 @@ input[type="week"] {
     line-height: 1;
 }
 input[type="week"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="number"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2473,13 +2433,13 @@ input[type="number"] {
     line-height: 1;
 }
 input[type="number"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="email"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2488,13 +2448,13 @@ input[type="email"] {
     line-height: 1;
 }
 input[type="email"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="url"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2503,13 +2463,13 @@ input[type="url"] {
     line-height: 1;
 }
 input[type="url"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="search"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2518,13 +2478,13 @@ input[type="search"] {
     line-height: 1;
 }
 input[type="search"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="tel"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2533,13 +2493,13 @@ input[type="tel"] {
     line-height: 1;
 }
 input[type="tel"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 input[type="color"] {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2548,13 +2508,13 @@ input[type="color"] {
     line-height: 1;
 }
 input[type="color"]:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
 .uneditable-input {
-    color: $color_mine_shaft_approx;
-    border: 1px solid $color_celeste_approx;
+    color: $gray-800;
+    border: 1px solid $gray-200;
     border-radius: 0;
     box-shadow: none;
     box-sizing: border-box;
@@ -2563,7 +2523,7 @@ input[type="color"]:focus {
     line-height: 1;
 }
 .uneditable-input:focus {
-    border-color: $color_alto_approx;
+    border-color: $gray-200;
     box-shadow: 0 0 10px 0 $color_deep_cerulean_26_approx;
     outline: 0;
 }
@@ -2572,8 +2532,8 @@ input[type="color"]:focus {
     border-color: $color_allports_approx;
 }
 .btn-primary:hover {
-    background-color: $color_cerulean_approx;
-    border-color: $color_cerulean_approx;
+    background-color: $primary;
+    border-color: $primary;
 }
 .btn-primary:focus,
 .btn-primary:focus:active,
@@ -2584,8 +2544,8 @@ input[type="color"]:focus {
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-    background: $color_cerulean_approx;
-    border-color: $color_cerulean_approx;
+    background: $primary;
+    border-color: $primary;
     box-shadow: none;
 }
 .btn-secondary {
@@ -2593,7 +2553,7 @@ input[type="color"]:focus {
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -2619,14 +2579,14 @@ input[type="color"]:focus {
 }
 .btn-secondary:disabled:hover {
     color: $color_cedar_approx;
-    background: $seashell;
+    background: $gray-100;
 }
 .btn-default {
     height: 40px;
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -2658,7 +2618,7 @@ button {
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -2711,7 +2671,7 @@ input.form-submit {
     box-shadow: none;
     text-transform: uppercase;
     vertical-align: top;
-    background: $color_thunderbird_approx;
+    background: $gray-900;
     text-shadow: none;
 }
 input.form-submit:hover {
@@ -2745,7 +2705,7 @@ input.form-submit.disabled {
     background: $color_allports_approx;
 }
 input#id_submitbutton {
-    background: $color_thunderbird_approx;
+    background: $gray-900;
     text-shadow: none;
 }
 input#id_submitbutton:hover {
@@ -2764,7 +2724,7 @@ input#id_submitbutton.disabled {
     background: $color_allports_approx;
 }
 input#id_submitbutton2 {
-    background: $color_thunderbird_approx;
+    background: $gray-900;
     text-shadow: none;
 }
 input#id_submitbutton2:hover {
@@ -2835,7 +2795,7 @@ input[type="button"] {
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -2867,7 +2827,7 @@ input[type="submit"] {
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -2899,7 +2859,7 @@ input[type="reset"] {
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -2951,7 +2911,7 @@ input[type="reset"][disabled] {
     outline: 0;
 }
 table {
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
 }
 table.discussion-list thead th a,
 table.discussion-list thead th a:hover {
@@ -2964,13 +2924,13 @@ table#form td.submit {
     margin: 0 0 24px;
 }
 table#form tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table#form tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.flexible {
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
 }
 table.flexible th {
     line-height: 21px;
@@ -2983,23 +2943,23 @@ table.flexible td {
     border-top: 0;
 }
 table.flexible tbody tr th {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 table.flexible tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table.flexible tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table.flexible tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.flexible tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.flexible thead th {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 table.flexible thead th img {
     background: $white;
@@ -3035,61 +2995,61 @@ table.generaltable.groupmanagementtable td {
     padding: 8px;
 }
 table tbody tr th {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 table#explaincaps tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table#explaincaps tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table#defineroletable tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table#defineroletable tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.grading-report tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.grading-report tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.grading-report tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table.grading-report tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table#listdirectories tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table#listdirectories tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.rolecaps tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.rolecaps tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.userenrolment tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table.userenrolment tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 table#modules tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table#modules tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table#permissions tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table#permissions tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 table.generalbox tbody tr td {
     padding-right: 10px;
@@ -3169,7 +3129,7 @@ table.generalbox tbody tr td {
     margin-left: 0;
 }
 .loginbox .loginpanel {
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
 }
 .loginbox .loginpanel .loginform {
     padding-bottom: 24px;
@@ -3191,7 +3151,7 @@ table.generalbox tbody tr td {
     margin: 0 0 20px;
 }
 .loginbox .loginsub.subcontent input[type="submit"] {
-    background: $color_thunderbird_approx;
+    background: $gray-900;
     margin-bottom: 12px;
 }
 .loginbox .loginsub.subcontent input[type="submit"]:hover {
@@ -3204,14 +3164,14 @@ table.generalbox tbody tr td {
     background: $color_allports_approx;
 }
 .loginbox .signuppanel .subcontent {
-    color: $color_mine_shaft_approx;
+    color: $gray-800;
     padding-top: 6px;
 }
 .loginbox .signuppanel .subcontent ol {
     margin-top: 10px;
 }
 .loginbox .signuppanel .subcontent ol li {
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
     line-height: 22px;
 }
 
@@ -3399,7 +3359,7 @@ table.generalbox tbody tr td {
 .coursebox {
     padding: 15px 20px 20px;
     border-style: solid;
-    border-color: $color_quill_gray_approx;
+    border-color: $gray-200;
     border-radius: 2px;
     margin: 9px 0;
 }
@@ -3453,7 +3413,7 @@ table.generalbox tbody tr td {
 }
 .coursebox .content .summary p {
     line-height: 24px;
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
     margin: 0;
 }
 .coursebox .content .teachers {
@@ -3463,11 +3423,11 @@ table.generalbox tbody tr td {
     clear: none;
 }
 .coursebox .content .teachers li {
-    color: $color_gray_approx;
+    color: $gray-500;
     line-height: 24px;
 }
 .coursebox .content .teachers li a {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .coursebox .content .courseimage {
     float: none;
@@ -3508,7 +3468,7 @@ table.generalbox tbody tr td {
     font-size: 21px;
     font-family:$font-family-sans-serif;
     line-height: 27px;
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     background-position: left 7px;
     padding: 0 27px;
 }
@@ -3522,7 +3482,7 @@ table.generalbox tbody tr td {
     font-size: 21px;
 }
 .course-content .topics .section .activity .contentafterlink p {
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
 }
 .course-content .topics .section .activity .contentafterlink .no-overflow {
     line-height: 22px;
@@ -3530,7 +3490,7 @@ table.generalbox tbody tr td {
 .course-content .topics .section .activity .activityinstance a {
     font-size: 18px;
     font-family:$font-family-sans-serif;
-    color: $color_storm_dust_approx;
+    color: $gray-600;
     line-height: 24px;
 }
 .course-content .topics .section .activity .activityinstance a img {
@@ -3557,7 +3517,7 @@ table.generalbox tbody tr td {
     margin-bottom: 0;
 }
 .course-content ul li.section.main {
-    border-bottom: 1px solid $color_quill_gray_approx;
+    border-bottom: 1px solid $gray-200;
 }
 .course-content ul li.section.main .section li.activity {
     padding-bottom: 10px;
@@ -3569,7 +3529,7 @@ table.generalbox tbody tr td {
     margin-top: 10px;
 }
 .generaltable {
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
 }
 .generaltable th {
     line-height: 21px;
@@ -3591,23 +3551,23 @@ table.generalbox tbody tr td {
     border-top: 0;
 }
 .generaltable tbody tr th {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .generaltable tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .generaltable tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .generaltable tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 .generaltable tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 .generaltable thead th {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .generaltable thead th img {
     background: $white;
@@ -3666,7 +3626,7 @@ table.generalbox tbody tr td {
     height: auto;
 }
 .btn.btn-link i:before {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 .btn.btn-secondary[role="button"] {
     color: #999;
@@ -3674,7 +3634,7 @@ table.generalbox tbody tr td {
     line-height: 30px;
     padding: 5px 10px;
     background: none;
-    border: 1px solid $color_mercury_approx;
+    border: 1px solid $gray-100;
 }
 .btn:focus {
     color: $white;
@@ -3690,31 +3650,31 @@ table.generalbox tbody tr td {
 i.icon {
     margin-right: 0;
     font-size: 16px;
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 i.icon :before {
     font-size: 16px;
 }
 .fp-viewbar.btn-group .btn.btn-secondary {
     background: none;
-    border: 1px solid $color_mercury_approx;
+    border: 1px solid $gray-100;
 }
 .fp-viewbar.btn-group .btn.btn-secondary.checked {
     background: $white;
 }
 .fp-viewbar.btn-group .btn.btn-secondary:disabled:hover {
-    background: $seashell;
+    background: $gray-100;
 }
 .fp-coursebox {
     max-height: none;
     min-height: 280px;
     background: $white;
     padding: 9px;
-    border: 1px solid $color_quill_gray_approx;
+    border: 1px solid $gray-200;
     margin: 15px auto;
 }
 .fp-coursebox .fp-coursethumb {
-    border: 1px solid $color_mercury_approx;
+    border: 1px solid $gray-100;
     margin: 0 auto;
 }
 .fp-coursebox .fp-coursethumb a {
@@ -3733,7 +3693,7 @@ i.icon :before {
     text-align: center;
 }
 .fp-coursebox .fp-courseinfo h5 a {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     word-wrap: break-word;
 }
 .fp-coursebox .readmore {
@@ -3743,7 +3703,7 @@ i.icon :before {
 .fp-coursebox .readmore a {
     color: $white;
     line-height: 30px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 10px;
     display: inline-block;
 }
@@ -3784,7 +3744,7 @@ i.icon :before {
 }
 .fp-site-customdesc p {
     line-height: 22px;
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
     margin-bottom: 0;
 }
 .fp-site-customdesc p a {
@@ -3862,8 +3822,8 @@ i.icon :before {
 }
 #loginbtn {
     width: auto;
-    background: $color_thunderbird_approx;
-    border-color: $color_thunderbird_approx;
+    background: $gray-900;
+    border-color: $gray-900;
     border-radius: 0;
 }
 #loginbtn:hover {
@@ -3889,13 +3849,13 @@ i.icon :before {
     color: $white;
 }
 .moodle-actionmenu.show[data-enhanced] .menu {
-    background: $seashell;
+    background: $gray-100;
     border: 0;
     border-radius: 0;
-    box-shadow: 0 0 6px 1px $black_20;
+    box-shadow: 0 0 6px 1px $gray-200;
 }
 .moodle-actionmenu.show[data-enhanced] .menu a {
-    color: $color_log_cabin_approx;
+    color: $gray-900;
     border-radius: 0;
 }
 .moodle-actionmenu.show[data-enhanced] .menu a:first-child {
@@ -3905,7 +3865,7 @@ i.icon :before {
     border-radius: 0;
 }
 .moodle-actionmenu.show[data-enhanced] .menu a:hover {
-    background: $color_cerulean_approx;
+    background: $primary;
     text-decoration: none;
 }
 .moodle-actionmenu.show[data-enhanced] .menu a:hover img.smallicon {
@@ -3922,14 +3882,14 @@ i.icon :before {
 .carousel-overlay-content .content-wrap h2 {
     font-family:$font-family-sans-serif;
     color: $white;
-    background: $black_50;
+    background: $gray-400;
     margin: 0;
     display: inline-block;
 }
 .carousel-overlay-content .content-wrap .read-more {
     font-family:$font-family-sans-serif;
     color: $white;
-    background: $color_thunderbird_approx;
+    background: $gray-900;
     display: inline-block;
     text-transform: uppercase;
 }
@@ -3963,7 +3923,7 @@ i.icon :before {
     top: 2px;
 }
 .block_navigation .block_tree .active_tree_node a {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 .block_settings .block_tree .tree_item {
     margin: 15px 0;
@@ -3975,7 +3935,7 @@ i.icon :before {
     top: 2px;
 }
 .block_settings .block_tree .active_tree_node a {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 .block_news_items .content ul li {
     padding: 7px 0;
@@ -4005,7 +3965,7 @@ i.icon :before {
 }
 #page-message-edit #region-main #messageprocessor_general > div > label {
     font-size: 14px;
-    color: $color_fuscous_gray_approx;
+    color: $gray-700;
     display: inline-block;
     margin-bottom: 0;
 }
@@ -4030,7 +3990,7 @@ input[type="checkbox"] + label {
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -4062,7 +4022,7 @@ input[type="checkbox"] + label {
     font-family:$font-family-sans-serif;
     color: $white;
     line-height: 40px;
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 0 18px;
     border: 0;
     border-radius: 0;
@@ -4096,7 +4056,7 @@ input[type="checkbox"] + label {
     margin: 0 0 24px;
 }
 .path-admin .buttons input[type="submit"] {
-    background: $color_thunderbird_approx;
+    background: $gray-900;
     text-shadow: none;
 }
 .path-admin .buttons input[type="submit"]:hover {
@@ -4118,7 +4078,7 @@ input[type="checkbox"] + label {
     background: $color_allports_approx;
 }
 td.submit input {
-    background: $color_thunderbird_approx;
+    background: $gray-900;
     text-shadow: none;
 }
 td.submit input:hover {
@@ -4153,7 +4113,7 @@ div.backup-section + form {
 }
 .courses .coursebox.collapsed {
     padding: 10px 14px;
-    border-color: $color_quill_gray_approx;
+    border-color: $gray-200;
 }
 .courses .coursebox.even {
     background: $white;
@@ -4190,7 +4150,7 @@ div.backup-section + form {
 }
 .path-mod-forum .forumheaderlist thead .header {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
     line-height: 20px;
     padding: 8px;
 }
@@ -4205,46 +4165,46 @@ tr.discussion .btn i.icon {
     color: $white;
 }
 form#movecourses table tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 form#movecourses table tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 #page-admin-course-index .editcourse tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 #page-admin-course-index .editcourse tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 .forumheaderlist tbody > tr:nth-child(2n + 1) > td {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 .forumheaderlist tbody > tr:nth-child(2n + 1) > th {
-    background: $color_black_haze_approx;
+    background: $gray-100;
 }
 .forumheaderlist tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .forumheaderlist tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .user-enroller-panel .uep-search-results .users tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .user-enroller-panel .uep-search-results .users tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .category_subcategories tbody tr:hover > td {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .category_subcategories tbody tr:hover > th {
-    background: $color_concrete_approx;
+    background: $gray-100;
 }
 .userprofile .userprofilebox .descriptionbox .description {
     margin: 0 0 10px;
@@ -4294,9 +4254,9 @@ form#movecourses table tbody > tr:nth-child(2n + 1) > th {
     text-transform: none;
 }
 #adminsettings h3 {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     padding-bottom: 10px;
-    border-bottom-color: $color_iron_approx;
+    border-bottom-color: $gray-200;
     margin-bottom: 40px;
 }
 #page-admin-tool-installaddon-index #installfromrepobox .singlebutton input[type="submit"] {
@@ -4335,7 +4295,7 @@ form#movecourses table tbody > tr:nth-child(2n + 1) > th {
 .path-grade-report-grader {
 }
 .userenrolment th {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .path-grade-report-user #graded_users_selector {
     float: none;
@@ -4352,8 +4312,8 @@ form#movecourses table tbody > tr:nth-child(2n + 1) > th {
 .block-region .block .card-body .card-title {
     width: 100%;
     padding: 20px;
-    background: $alabaster;
-    border-bottom: 1px solid $color_quill_gray_approx;
+    background: $white;
+    border-bottom: 1px solid $gray-200;
     display: block !important;
     margin-right: 0 !important;
 }
@@ -4378,7 +4338,7 @@ form#movecourses table tbody > tr:nth-child(2n + 1) > th {
     width: auto;
 }
 .form-autocomplete-selection span.badge {
-    background: $color_cerulean_approx;
+    background: $primary;
     padding: 5px;
 }
 .form-autocomplete-suggestions {
@@ -4386,13 +4346,13 @@ form#movecourses table tbody > tr:nth-child(2n + 1) > th {
     right: auto;
 }
 .form-autocomplete-suggestions li:first-child {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .form-autocomplete-suggestions li:hover,
 .form-autocomplete-suggestions li:focus,
 .form-autocomplete-suggestions li[aria-selected="true"] {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
     box-shadow: none;
 }
 .form-autocomplete-suggestions select.form-control:not([size]):not([multiple]) {
@@ -4435,10 +4395,10 @@ select.form-control:not([size]):not([multiple]) {
     object-fit: cover;
 }
 #site-news-forum .forum-post-container .forumpost .body-content-container .content-alignment-container .post-actions a.btn {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 #site-news-forum .forum-post-container .forumpost .body-content-container .content-alignment-container .post-actions a.btn:hover {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 .card .course_list .coursebox {
     padding: 15px;
@@ -4471,7 +4431,7 @@ select.form-control:not([size]):not([multiple]) {
     outline: none;
 }
 .card-body .block-controls .dropdown .dropdown-menu a:hover {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .card-body .block-controls .dropdown .dropdown-toggle i {
     margin: 0;
@@ -4485,7 +4445,7 @@ select.form-control:not([size]):not([multiple]) {
     line-height: 20px;
 }
 #categoryquestions .header a {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 .submissionlinks a.btn {
     height: 40px;
@@ -4505,7 +4465,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 #region-main-settings-menu .action-menu .menubar .dropdown .dropdown-menu .dropdown-item span:hover {
     color: $white;
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 #region-main-settings-menu .action-menu .menubar .dropdown .dropdown-menu .dropdown-item span:hover i {
     color: $white;
@@ -4607,7 +4567,7 @@ div.editor_atto_toolbar button {
 }
 .pagelayout-frontpage #coursesearch .coursesearchbox label {
     display: block;
-    color: $color_thunderbird_approx;
+    color: $gray-900;
     font-family:$font-family-sans-serif;
     font-size: 18px;
     margin-bottom: 10px;
@@ -4636,7 +4596,7 @@ div.editor_atto_toolbar button {
     float: none;
 }
 .block_myoverview .content-centred .nav.nav-pills .nav-item .nav-link.active {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .block_myoverview .content-centred .nav.nav-pills .nav-item .nav-link.active:hover {
     color: $white;
@@ -4684,15 +4644,15 @@ div.editor_atto_toolbar button {
     margin-right: 0;
 }
 .list-group-item.active {
-    border-color: $color_cerulean_approx;
-    background-color: $color_cerulean_approx;
+    border-color: $primary;
+    background-color: $primary;
 }
 .page-item .page-link {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 .page-item.active .page-link {
-    border-color: $color_cerulean_approx;
-    background: $color_cerulean_approx;
+    border-color: $primary;
+    background: $primary;
 }
 .pagination .page-item .page-link:focus {
     box-shadow: none;
@@ -4702,14 +4662,14 @@ div.editor_atto_toolbar button {
 }
 .userlist .initialbar .pagination .page-item.active .page-link {
     color: $white;
-    background-color: $color_cerulean_approx;
-    border-color: $color_cerulean_approx;
+    background-color: $primary;
+    border-color: $primary;
 }
 .userlist .initialbar .pagination .page-item.active .page-link:hover {
     color: $white;
 }
 .userlist .initialbar .pagination .page-item .page-link {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 .moodle-dialogue-base button.closebutton:active,
 button.closebutton:active {
@@ -4831,7 +4791,7 @@ button.closebutton:active {
 }
 button.close:hover,
 .moodle-dialogue-base button.closebutton:hover {
-    color: $color_cerulean_approx;
+    color: $primary;
     background: none;
 }
 button.close:focus,
@@ -4894,10 +4854,10 @@ button.close:focus,
     padding-right: 10px !important;
 }
 .header-main .message-app .header-container .badge {
-    background-color: $color_cerulean_approx !important;
+    background-color: $primary !important;
 }
 .header-main .message-app .body-container .view-overview-body .section .badge {
-    background-color: $color_cerulean_approx !important;
+    background-color: $primary !important;
 }
 .header-main .message-app .body-container .view-overview-body .section .btn:focus {
     color: inherit;
@@ -4910,18 +4870,18 @@ button.close:focus,
 }
 .header-main .message-app .body-container .custom-control.custom-radio .custom-control-input:checked + .custom-control-label:before,
 .header-main .message-app .body-container .custom-control.custom-switch .custom-control-input:checked + .custom-control-label:before {
-    background-color: $color_cerulean_approx;
-    border-color: $color_cerulean_approx;
+    background-color: $primary;
+    border-color: $primary;
 }
 .header-main .message-app .body-container .custom-control.custom-radio .custom-control-input:active ~ .custom-control-label:before {
     background-color: rgba(0, 115, 165, .25);
 }
 .header-main .message-app .body-container .custom-control.custom-radio .custom-control-input:checked:focus ~ .custom-control-label:before {
-    background-color: $color_cerulean_approx;
+    background-color: $primary;
     box-shadow: 0 0 0 1px $white, 0 0 0 0.2rem rgba(0, 115, 165, .25);
 }
 .header-main .message-app .body-container .switch input:checked + label:before {
-    background-color: $color_cerulean_approx;
+    background-color: $primary;
 }
 .header-main .message-app .body-container .switch input:focus + label:before {
     box-shadow: 0 0 0 1px $white, 0 0 0 0.2rem rgba(0, 115, 165, .25);
@@ -4955,7 +4915,7 @@ button.close:focus,
     border-radius: 5px;
 }
 #region-main.has-blocks .block-myoverview .progress .progress-bar {
-    background-color: $color_cerulean_approx;
+    background-color: $primary;
 }
 .notification-area .control-area .content .content-item-container.selected {
     background-color: $color_allports_approx;
@@ -4970,10 +4930,10 @@ button.close:focus,
     margin-top: 0;
 }
 .block_recentlyaccessedcourses .paging-bar-container .pagination .page-item .page-link {
-    color: $color_cerulean_approx;
+    color: $primary;
 }
 table.table-striped thead th a {
-    /*color: $color_cerulean_approx;*/
+    /*color: $primary;*/
 }
 
 @media (max-width: 767px) {
@@ -4985,11 +4945,11 @@ table.table-striped thead th a {
         flex: auto;
     }
     .block.card {
-        border: 1px solid $color_quill_gray_approx;
+        border: 1px solid $gray-200;
     }
     .nav-tabs .nav-link.active:not(:disabled):not(.disabled):active, .nav-tabs .nav-link.active:not(:disabled):not(.disabled).active, .show>.nav-tabs .nav-link.active.dropdown-toggle, .nav-pills .nav-link.active:not(:disabled):not(.disabled):active, .nav-pills .nav-link.active:not(:disabled):not(.disabled).active, .show>.nav-pills .nav-link.active.dropdown-toggle {
-        background: $color_cerulean_approx;
-        border-color: $color_cerulean_approx;
+        background: $primary;
+        border-color: $primary;
     }
 }
 
@@ -4997,7 +4957,7 @@ table.table-striped thead th a {
     display: none;
 }
 .page-context-header .header-button-group a:focus {
-    color: $color_thunderbird_approx;
+    color: $gray-900;
 }
 #frontpage-category-names h2,
 #frontpage-category-combo h2 {
@@ -5007,7 +4967,7 @@ table.table-striped thead th a {
     margin: 0 auto;
 }
 .simplesearchform .btn-submit {
-    background: $color_cerulean_approx;
+    background: $primary;
 }
 .simplesearchform .btn i.icon,
 .simplesearchform .btn:hover i.icon,
