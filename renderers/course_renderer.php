@@ -243,4 +243,210 @@ class theme_boost_materialized_core_course_renderer extends core_course_renderer
         $content .= html_writer::end_tag('div'); // Coursebox.
         return $content;
     }
+
+    /**
+     * Renders HTML to display one course module for display within a section.
+     *
+     * This function calls:
+     * {@link core_course_renderer::course_section_cm()}
+     *
+     * @param stdClass $course
+     * @param completion_info $completioninfo
+     * @param cm_info $mod
+     * @param int|null $sectionreturn
+     * @param array $displayoptions
+     * @return String
+     */
+    public function course_section_cm_list_item($course, &$completioninfo, cm_info $mod, $sectionreturn, $displayoptions = array()) {
+        $output = '';
+        $completioncolor_li = '';
+        if(true){
+            global $DB;
+            $hours = 0;
+            $mins = 0;
+            $data = $completioninfo->get_data($mod, true);
+            $weights = $DB->get_records_sql("
+                SELECT intvalue
+                FROM {customfield_data} d
+                INNER JOIN {customfield_field} f ON d.fieldid=f.id
+                WHERE
+                    f.shortname in ('duration_hours', 'duration_mins') AND d.instanceid=?", array($mod->id));
+            $i=0;
+            foreach ($weights as $key => $value) {
+                if($i==0)
+                    $hours = $key/3600;
+                else
+                    $mins = $key/60;
+                $i++;
+            }
+            $completioncolor_li = $data->completionstate == COMPLETION_INCOMPLETE ? "#fcf8e3" : "#dff0d8";
+            $completioncolor_badge = $data->completionstate == COMPLETION_INCOMPLETE ? "#d58512" : "#398439";
+            $displayoptions = array_merge($displayoptions , ["duration" => $hours. "h ". str_pad($mins, 2, 0, STR_PAD_LEFT). "m", "completioncolor" => $completioncolor_badge]);
+        }
+        if ($modulehtml = $this->course_section_cm($course, $completioninfo, $mod, $sectionreturn, $displayoptions)) {
+            $modclasses = 'activity ' . $mod->modname . ' modtype_' . $mod->modname . ' ' . $mod->extraclasses;
+            $output .= html_writer::tag('li', $modulehtml, array('class' => $modclasses, 'id' => 'module-' . $mod->id, 
+                'style' => "background-color: ". $completioncolor_li. ";"));
+        }
+        return $output;
+    }
+
+        /**
+     * Renders html for completion box on course page
+     *
+     * If completion is disabled, returns empty string
+     * If completion is automatic, returns an icon of the current completion state
+     * If completion is manual, returns a form (with an icon inside) that allows user to
+     * toggle completion
+     *
+     * @param stdClass $course course object
+     * @param completion_info $completioninfo completion info for the course, it is recommended
+     *     to fetch once for all modules in course/section for performance
+     * @param cm_info $mod module to show completion for
+     * @param array $displayoptions display options, not used in core
+     * @return string
+     */
+    public function course_section_cm_completion($course, &$completioninfo, cm_info $mod, $displayoptions = array()) {
+        global $CFG, $DB, $USER;
+        $output = '';
+
+        $istrackeduser = $completioninfo->is_tracked_user($USER->id);
+        $isediting = $this->page->user_is_editing();
+
+        if (!empty($displayoptions['hidecompletion']) || !isloggedin() || isguestuser() || !$mod->uservisible) {
+            return $output;
+        }
+        if ($completioninfo === null) {
+            $completioninfo = new completion_info($course);
+        }
+        $completion = $completioninfo->is_enabled($mod);
+
+        if ($completion == COMPLETION_TRACKING_NONE) {
+            if ($isediting) {
+                $output .= html_writer::span('&nbsp;', 'filler');
+            }
+            return $output;
+        }
+
+        $completionicon = '';
+
+        if ($isediting || !$istrackeduser) {
+            switch ($completion) {
+                case COMPLETION_TRACKING_MANUAL :
+                    $completionicon = 'manual-enabled'; break;
+                case COMPLETION_TRACKING_AUTOMATIC :
+                    $completionicon = 'auto-enabled'; break;
+            }
+        } else {
+            $completiondata = $completioninfo->get_data($mod, true);
+            if ($completion == COMPLETION_TRACKING_MANUAL) {
+                switch($completiondata->completionstate) {
+                    case COMPLETION_INCOMPLETE:
+                        $completionicon = 'manual-n' . ($completiondata->overrideby ? '-override' : '');
+                        break;
+                    case COMPLETION_COMPLETE:
+                        $completionicon = 'manual-y' . ($completiondata->overrideby ? '-override' : '');
+                        break;
+                }
+            } else { // Automatic
+                switch($completiondata->completionstate) {
+                    case COMPLETION_INCOMPLETE:
+                        $completionicon = 'auto-n' . ($completiondata->overrideby ? '-override' : '');
+                        break;
+                    case COMPLETION_COMPLETE:
+                        $completionicon = 'auto-y' . ($completiondata->overrideby ? '-override' : '');
+                        break;
+                    case COMPLETION_COMPLETE_PASS:
+                        $completionicon = 'auto-pass'; break;
+                    case COMPLETION_COMPLETE_FAIL:
+                        $completionicon = 'auto-fail'; break;
+                }
+            }
+        }
+        if ($completionicon) {
+            $formattedname = html_entity_decode($mod->get_formatted_name(), ENT_QUOTES, 'UTF-8');
+            if (!$isediting && $istrackeduser && $completiondata->overrideby) {
+                $args = new stdClass();
+                $args->modname = $formattedname;
+                $overridebyuser = \core_user::get_user($completiondata->overrideby, '*', MUST_EXIST);
+                $args->overrideuser = fullname($overridebyuser);
+                $imgalt = get_string('completion-alt-' . $completionicon, 'completion', $args);
+            } else {
+                $imgalt = get_string('completion-alt-' . $completionicon, 'completion', $formattedname);
+            }
+
+            if ($isediting || !$istrackeduser || !has_capability('moodle/course:togglecompletion', $mod->context)) {
+                // When editing, the icon is just an image.
+                $completionpixicon = new pix_icon('i/completion-'.$completionicon, $imgalt, '',
+                        array('title' => $imgalt, 'class' => 'iconsmall'));
+                $output .= html_writer::tag('span', $this->output->render($completionpixicon),
+                        array('class' => 'autocompletion'));
+            } else if ($completion == COMPLETION_TRACKING_MANUAL) {
+                $newstate =
+                    $completiondata->completionstate == COMPLETION_COMPLETE
+                    ? COMPLETION_INCOMPLETE
+                    : COMPLETION_COMPLETE;
+                // In manual mode the icon is a toggle form...
+
+                // If this completion state is used by the
+                // conditional activities system, we need to turn
+                // off the JS.
+                $extraclass = '';
+                if (!empty($CFG->enableavailability) &&
+                        core_availability\info::completion_value_used($course, $mod->id)) {
+                    $extraclass = ' preventjs';
+                }
+                $output .= html_writer::start_tag('form', array('method' => 'post',
+                    'action' => new moodle_url('/course/togglecompletion.php'),
+                    'class' => 'togglecompletion'. $extraclass));
+                $output .= html_writer::start_tag('div');
+                $output .= html_writer::empty_tag('input', array(
+                    'type' => 'hidden', 'name' => 'id', 'value' => $mod->id));
+                $output .= html_writer::empty_tag('input', array(
+                    'type' => 'hidden', 'name' => 'sesskey', 'value' => sesskey()));
+                $output .= html_writer::empty_tag('input', array(
+                    'type' => 'hidden', 'name' => 'modulename', 'value' => $formattedname));
+                $output .= html_writer::empty_tag('input', array(
+                    'type' => 'hidden', 'name' => 'completionstate', 'value' => $newstate));
+                $output .= html_writer::tag('button',
+                    $this->output->pix_icon('i/completion-' . $completionicon, $imgalt),
+                        array('class' => 'btn btn-link', 'aria-live' => 'assertive'));
+                        $output .= html_writer::tag('span', $displayoptions["duration"],
+                                array('style' => 'display: inline-block;
+                                                    min-width: 10px;
+                                                    padding: 3px 7px;
+                                                    font-size: 12px;
+                                                    font-weight: 700;
+                                                    color: #fff;
+                                                    text-align: center;
+                                                    white-space: nowrap;
+                                                    vertical-align: middle;
+                                                    background-color: '.$displayoptions["completioncolor"].';
+                                                    border-radius: 10px;'));
+                $output .= html_writer::end_tag('div');
+                $output .= html_writer::end_tag('form');
+                
+            } else {
+                // In auto mode, the icon is just an image.
+                $completionpixicon = new pix_icon('i/completion-'.$completionicon, $imgalt, '',
+                        array('title' => $imgalt));
+                $output .= html_writer::tag('span', $this->output->render($completionpixicon),
+                        array('class' => 'autocompletion'));
+                $output .= html_writer::tag('span', $displayoptions["duration"],
+                                array('style' => 'display: inline-block;
+                                                    min-width: 10px;
+                                                    padding: 3px 7px;
+                                                    font-size: 12px;
+                                                    font-weight: 700;
+                                                    color: #fff;
+                                                    text-align: center;
+                                                    white-space: nowrap;
+                                                    vertical-align: middle;
+                                                    background-color: '.$displayoptions["completioncolor"].';
+                                                    border-radius: 10px;'));
+            }
+        }
+        return $output;
+    }
 }
+
