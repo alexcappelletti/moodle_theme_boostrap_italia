@@ -125,6 +125,8 @@ a:not([class]):focus,
 }
 a {
     color: $primary;
+    text-decoration: none;
+
 }
 a:hover {
     color: $gray-900;
