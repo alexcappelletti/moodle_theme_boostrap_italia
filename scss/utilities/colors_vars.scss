@@ -5,7 +5,7 @@
 $black: hsl(0, 0, 0) !default;
 $white: hsl(0, 0, 100) !default;
 
-$gray-100: hsb(225, 0, 90) !default;
+$gray-100: hsb(225, 0, 90) !default; //chiaro
 $gray-200: hsb(225, 0, 80) !default;
 $gray-300: hsb(225, 0, 70) !default;
 $gray-400: hsb(225, 0, 60) !default;
@@ -13,7 +13,7 @@ $gray-500: hsb(225, 0, 50) !default;
 $gray-600: hsb(225, 0, 40) !default;
 $gray-700: hsb(225, 0, 30) !default;
 $gray-800: hsb(225, 0, 20) !default;
-$gray-900: hsb(225, 0, 10) !default;
+$gray-900: hsb(225, 0, 10) !default;  //scuro
 
 $grays: () !default;
 $grays: map-merge(

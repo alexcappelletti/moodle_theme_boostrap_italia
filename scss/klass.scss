@@ -126,7 +126,6 @@ a:not([class]):focus,
 a {
     color: $primary;
     text-decoration: none;
-
 }
 a:hover {
     color: $gray-900;
@@ -294,7 +293,7 @@ h6 {
     display: none;
 }
 #header .menubar .dropdown-menu a {
-    color: $gray-300;
+    color: $primary;
     background: $white;
     border-bottom: 1px solid $gray-100;
 }
@@ -620,7 +619,7 @@ h6 {
     float: none;
 }
 .usermenu .login {
-    font-size: 12px;
+    font-size: 16px;
     color: $white;
     line-height: 20px;
     padding: 7px 0;
@@ -628,7 +627,7 @@ h6 {
 }
 .usermenu .login a {
     color: $white;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .usermenu .login a:hover {
     color: $white;
