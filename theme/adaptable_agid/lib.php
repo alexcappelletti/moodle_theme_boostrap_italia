@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+global $CFG;
+
 /**
  * Load the Jquery and migration files
  * Load the our theme js file
@@ -31,15 +33,16 @@ defined('MOODLE_INTERNAL') || die();
  * @param  moodle_page $page [description]
  */
 function theme_adaptable_agid_page_init(moodle_page $page) {
-    $page->requires->jquery();
-    $page->requires->js('/theme/adaptable_agid/javascript/theme.js');
+//    $page->requires->jquery();
+//    $page->requires->js('/theme/adaptable_agid/javascript/theme.js');
 }
 
 
 function theme_adaptable_agid_get_agid($theme) {
     global $CFG;   
     //return file_get_contents($CFG->dirroot . '/theme/adaptable_agid/scss/materia_AGID.scss');
-    return file_get_contents($CFG->dirroot . '/theme/adaptable_agid/scss/klass.scss');
+    //return file_get_contents($CFG->dirroot . '/theme/adaptable_agid/scss/bootstrap-ita.scss');
+    return "";
 }
 
 

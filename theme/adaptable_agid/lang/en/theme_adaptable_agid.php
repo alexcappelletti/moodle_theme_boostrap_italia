@@ -46,7 +46,7 @@ $string['aboutus'] = 'About Us';
 $string['address'] = 'Address';
 $string['calendar'] = 'Calendar';
 
-$string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot"><img class=img-polaroid src="adaptable_agid/pix/screenshot.jpg" /><br/><p></p><h3>Theme Credits</h3><p><h3>Moodle adaptable_agid theme</h3><p>This theme is based on the Boost Moodle theme.</p><p>Authors: LMSACE Dev Team<br>Contact: info@lmsace.com<br>Website: <a href="http://www.lmsace.com">www.lmsace.com</a><br></p>';
+$string['choosereadme'] = '<div class="clearfix"><div class="theme_screenshot"><img class=img-polaroid src="adaptable_agid/pix/screenshot.png" /><br/><p></p><h3>Theme Credits</h3><p><h3>Moodle adaptable_agid theme</h3><p>This theme is based on the Boost Moodle theme.</p><p>Authors: LMSACE Dev Team<br>Contact: info@lmsace.com<br>Website: <a href="http://www.lmsace.com">www.lmsace.com</a><br></p>';
 
 $string['configtitle'] = 'adaptable_agid';
 $string['connectus'] = 'Connect with us';

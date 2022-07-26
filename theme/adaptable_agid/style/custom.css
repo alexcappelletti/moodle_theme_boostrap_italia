@@ -1,0 +1,325 @@
+.video {
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@font-face {
+	font-family: 'Titillium Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Regular'), url('/theme/adaptable/fonts/Titillium-Regular.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Regular Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Regular Italic'), url('/theme/adaptable/fonts/Titillium-RegularItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Regular Upright';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Regular Upright'), url('/theme/adaptable/fonts/Titillium-RegularUpright.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Thin';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Thin'), url('/theme/adaptable/fonts/Titillium-Thin.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Thin Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Thin Italic'), url('/theme/adaptable/fonts/Titillium-ThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Thin Upright';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Thin Upright'), url('/theme/adaptable/fonts/Titillium-ThinUpright.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Light'), url('/theme/adaptable/fonts/Titillium-Light.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Light Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Light Italic'), url('/theme/adaptable/fonts/Titillium-LightItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Light Upright';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Light Upright'), url('/theme/adaptable/fonts/Titillium-LightUpright.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Semibold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Semibold'), url('/theme/adaptable/fonts/Titillium-Semibold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Semibold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Semibold Italic'), url('/theme/adaptable/fonts/Titillium-SemiboldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Semibold Upright';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Semibold Upright'), url('/theme/adaptable/fonts/Titillium-SemiboldUpright.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Bold'), url('/theme/adaptable/fonts/Titillium-Bold.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Bold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Bold Italic'), url('/theme/adaptable/fonts/Titillium-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium Bold Upright';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium Bold Upright'), url('/theme/adaptable/fonts/Titillium-BoldUpright.woff') format('woff');
+}
+
+
+@font-face {
+	font-family: 'Titillium';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Titillium'), url('/theme/adaptable/fonts/Titillium-Black.woff') format('woff');
+}
+
+
+body {
+	font-family: "Titillium Web", Geneva, Tahoma, sans-serif;
+}
+
+
+
+.it-header-slim-wrapper {
+	background: #0059b3;
+	padding: 6.5px 18px;
+	border-bottom: 1px solid #fff;
+}
+
+.ente {
+	font-weight: 700;
+	padding-right: 20px;
+}
+
+.it-header-slim-wrapper a:hover {
+	text-decoration: underline;
+}
+
+
+.it-header-slim-wrapper .it-header-slim-wrapper-content .navbar-brand {
+	color: #fff;
+	font-size: .9rem;
+	padding: 0;
+}
+
+.it-header-slim-wrapper-content .div-rem-header-77 {
+	color: #fff;
+}
+
+section.loghi-istituzionali {
+	text-align: center;
+}
+
+#adaptable-page-header-wrapper {
+
+	border-top: 1px solid#0000001a !important;
+	border-bottom: 1px solid#0000001a !important;
+}
+
+
+
+#adaptable-page-header-wrapper #main-navbar ul.navbar-nav>li>a.nav-link:hover,
+#adaptable-page-header-wrapper #main-navbar li div.nav-link:hover,
+#adaptable-page-header-wrapper #main-navbar li #edittingbutton input[type="submit"]:hover {
+
+	color: #fff !important;
+	background-color: #0059b3;
+	text-decoration: none;
+}
+
+#logo {
+	max-width: 440px !important;
+	padding: 15px 0px 15px;
+	margin-left: 15px;
+}
+
+#adaptable-page-header-wrapper #main-navbar .navbar-nav>li>a,
+#adaptable-page-header-wrapper #main-navbar .navbar-nav>li>div.nav-link {
+	color: #06c !important;
+}
+
+.it-header-slim-wrapper .it-header-slim-wrapper-content a .icon {
+	fill: #fff;
+	width: 35px;
+	height: 35px;
+	-webkit-transition: .3s;
+	transition: .3s;
+	-webkit-transform-origin: center;
+	transform-origin: center;
+}
+
+.btn-login {
+	background-color: #0059b3 !important;
+}
+
+.btn-login:hover {
+	background-color: #06c !important
+}
+
+.box.generalbox.sitetopic h2 {
+	color: #0066cc !important;
+	font-weight: 600 !important;
+	margin-left: -15px !important;
+}
+
+
+.aalink.focus,
+#page-footer a:not([class]).focus,
+.arrow_link.focus,
+a:not([class]).focus,
+.activityinstance>a.focus,
+.aalink:focus,
+#page-footer a:not([class]):focus,
+.arrow_link:focus,
+a:not([class]):focus,
+.activityinstance>a:focus {
+	outline: .2rem solid transparent;
+	color: #212529;
+	background-color: transparent;
+	-webkit-box-shadow: none !important;
+	box-shadow: 0 -0.2rem #e4f1fd, 0 0.2rem #343a40;
+}
+
+#fitem_id_moodlenetprofile {
+	display: none;
+}
+
+#fitem_id_description_editor {
+	display: none;
+}
+
+#fitem_id_url {
+	display: none;
+}
+
+#fitem_id_icq {
+	display: none;
+}
+
+#fitem_id_skype {
+	display: none;
+}
+
+#fitem_id_aim {
+	display: none;
+}
+
+#fitem_id_yahoo {
+	display: none;
+}
+
+#fitem_id_msn {
+	display: none;
+}
+
+#fitem_id_idnumber {
+	display: none;
+}
+
+#fitem_id_department {
+	display: none;
+}
+
+#fitem_id_phone1 {
+	display: none;
+}
+
+#fitem_id_phone2 {
+	display: none;
+}
+
+#fitem_id_address {
+	display: none;
+}
+
+fieldset#id_moodle_picture {
+	display: none;
+}
+
+fieldset#id_moodle_additional_names {
+	display: none;
+}
+
+fieldset#id_moodle_interests {
+	display: none;
+}
+
+div.forgetpass~h6 {
+	display: none !important;
+}
+
+div.forgetpass~div.potentialidplist {
+	#display: none !important;
+}
+
+div.col-12~div.miscellaneous {
+	display: none !important;
+}
